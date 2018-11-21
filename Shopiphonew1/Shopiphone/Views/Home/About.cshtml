@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("About", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="container">
+
+                    <!-- GROUP MEMEBER CONTENT HERE -->
+                    <style>
+                        .vl {
+                            border-left: 6px solid green;
+                            margin-bottom: -40px;
+                            height: 35px;
+                        }
+                    </style>
+
+                    <div class="vl"></div>
+
+                    <p style="margin-top: 0px;font-size: 30px" class="navbar-text"><b>What I Can All Do</b></p>
+                    <img style="max-width:1000px;margin-top: 10px;margin-left: -10px; margin-bottom: 100px" alt="Brand" src="Pictures/textimage1.png">
+                </div>
+
+                <style>
+                    .v2 {
+                        border-left: 6px;
+                        margin-bottom: -20px;
+                        height: 100px;
+                    }
+                </style>
+                <div class="v2"></div>
+
+                <style>
+                    .sidebar {
+                        width: 225px;
+                        height: 600px;
+                        background-color: #228B22;
+                        margin-top: -60px;
+                    }
+                </style>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="sidebar">
+                                <div>
+                                    <form>
+                                        <button style="margin-top: 10px; margin-bottom: 5px; font-size: 16px;background: #6B8E23;" class="btn btn-primary btn-lg" type="submit" formaction="Add-phones.html">
+                                            Add New Mobile Phones
+
+                                        </button>
+                                    </form>
+                                </div>
+                                <div>
+                                    <form>
+                                        <button style="margin-top: 10px; margin-bottom: 20px; font-size: 16px;background: #6B8E23;" class="btn btn-primary btn-lg" type="submit" formaction="secondhand.html">
+                                            Confirm or Cancel Mobile
+
+                                        </button>
+                                    </form>
+                                </div>
+                                <div>
+                                    <form>
+                                        <button style="margin-bottom: 20px;font-size: 16px;width: 215px; background: #6B8E23" class="btn btn-primary btn-lg" type="submit" formaction="Add-accessories.html"> Add Accessories</button>
+                                    </form>
+                                </div>
+                                <div>
+                                    <form>
+                                        <button style=" font-size: 16px;width: 218px;background: #6B8E23" class="btn btn-primary btn-lg" type="submit" formaction="Sell N Purchase.html">Sale and Purchase List</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="" class="col-lg-6">
+                            <button class="btn btn-primary btn-lg" type="submit" formaction="" style="background-color: #6B8E23; margin-left: -300px;margin-right: 30px;">Items Remaining </button>
+                            <select>
+                                <option value="volvo">select</option>
+                                <option value="saab">Samsung</option>
+                                <option value="opel">Apple</option>
+                                <option value="audi">Huawei</option>
+                            </select>
+                            <button class="btn btn-primary btn-lg" type="submit" formaction="" style="background-color: #6B8E23; margin-left: 150px;">View all items</button>
+
+
+                        </div>
+                        <div style="" class="col-lg-6">
+                            <table style="margin-top: 100px; margin-left: -250px;" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Remaining</th>
+                                        <th>Sold</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>J7 pro</td>
+                                        <td>10</td>
+                                        <td>1</td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>C5</td>
+                                        <td>6</td>
+                                        <td>2</td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>C7 pro</td>
+                                        <td>7</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Mini tripod stand</td>
+                                        <td>1</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- row ended
+                -->
+
+                <div style="margin-top: 200px">
+
+
+                </div>
+
+
+
+        
+            }
+</section>
+</div>
+</div>
