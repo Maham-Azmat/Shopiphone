@@ -1,0 +1,129 @@
+﻿@model Shopiphone.Models.MobilePhones
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Create", "Mobile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <div class="container">
+        <!-- GROUP MEMEBER CONTENT HERE -->
+
+        <div class="container">
+            <!-- GROUP MEMEBER CONTENT HERE -->
+            <style>
+                .vl {
+                    border-left: 6px solid green;
+                    margin-bottom: -40px;
+                    height: 35px;
+                }
+            </style>
+
+            <div class="vl"></div>
+
+            <p style="margin-top: 0px;font-size: 30px" class="navbar-text">Add New Phone </p>
+            <img style="max-width:1000px; margin-top: 10px; margin-left: -10px;" alt="Brand" src="~/Pictures/textimage1.png">
+
+        </div>
+    </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.IME, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.IME, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.IME, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-sm-5">
+            <!-- </div> -->
+            <!-- <div class="input-group-md" style="padding-right:100px">
+            <input type="text" class="form-control" placeholder="Mobile Brands..." >-->
+
+            <div style="resize:horizontal;width:515px;margin-left:0px;margin-bottom:-15px;" class="form-group">
+
+                <select name="type" id="type" class="form-control">
+
+                    <option selected="">Iphone</option>
+                    <option selected="">Samsung</option>
+                    <option selected="">Oppo</option>
+                    <option selected="">Nokia</option>
+                    <option selected="">Sony</option>
+                    <option selected="">QMobile</option>
+                    <option selected="">Vivo</option>
+                    <option selected="">Huawei</option>
+                    <option selected="">Choose brand</option>
+
+
+                </select>
+
+            </div>
+
+            @*@Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Warranty, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.Warranty, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Warranty, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Model, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+        <textarea class="col-md-5 " rows="5" style="width:520px;margin-left:15px;">
+            @*@Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })*@
+        </textarea>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            <input type="file" name="ImageFile" required>
+            @*<a href="#" class="thumbnail">
+                    <img src="" alt="">
+                </a>*@
+        </div>
+        ...
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input style="background-color: #6B8E23; color:#ffffff;" type="submit" value="ADD" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
