@@ -1,0 +1,103 @@
+﻿@model Shopiphone.Models.MobilePhones
+
+@{
+    ViewBag.Title = "Details";
+}
+@using (Html.BeginForm("Create", "Mobile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="container">
+            <!-- GROUP MEMEBER CONTENT HERE -->
+
+            <div class="container">
+                <!-- GROUP MEMEBER CONTENT HERE -->
+                <style>
+                    .vl {
+                        border-left: 6px solid green;
+                        margin-bottom: -40px;
+                        height: 35px;
+                    }
+                </style>
+
+                <div class="vl"></div>
+
+                <p style="margin-top: 0px;font-size: 30px" class="navbar-text">Specifications </p>
+                <img style="max-width:1000px; margin-top: 10px; margin-left: -10px;" alt="Brand" src="~/Pictures/textimage1.png">
+
+            </div>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div>
+            <h4>MobilePhones</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.IME)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.IME)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Brand)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Brand)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Warranty)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Warranty)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Model)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Model)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+                <dt>
+
+                </dt>
+                <dd>
+                    
+                    <img src="@Url.Content(Model.Picture)"/>
+                </dd>
+
+
+            </dl>
+        </div>
+    </div>
+}
+    <p>
+        <a href=" ~/Allitems/Details/" type="button" class="btn btn-primary btn-responsive"> Specifications</a>
+
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
