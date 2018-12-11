@@ -1,0 +1,141 @@
+﻿@model Shopiphone.Models.Secondhandviewmodel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@using (Html.BeginForm("Details", "Second", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="container">
+            <!-- GROUP MEMEBER CONTENT HERE -->
+
+            <div class="container">
+                <!-- GROUP MEMEBER CONTENT HERE -->
+                <style>
+                    .vl {
+                        border-left: 6px solid green;
+                        margin-bottom: -40px;
+                        height: 35px;
+                    }
+                </style>
+
+                <div class="vl"></div>
+
+                <p style="margin-top: 0px;font-size: 30px" class="navbar-text">Specifications </p>
+                <img style="max-width:1000px; margin-top: 10px; margin-left: -10px;" alt="Brand" src="~/Pictures/textimage1.png">
+
+            </div>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div>
+
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CNIC)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CNIC)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MobileNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MobileNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.IME)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.IME)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Brand)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Brand)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Warranty)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Warranty)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Model)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Model)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Used)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Used)
+                </dd>
+
+                <dt>
+
+                </dt>
+
+                <dd>
+                    <img src="@Url.Content(Model.Picture)" />
+                </dd>
+
+
+
+            </dl>
+        </div>
+
+    </div>
+}
+<div class="row">
+    <div style="" class="col-lg-6">
+        <a href="~/Purchase/Purchaselist/@Model.IME" style="background-color: #6B8E23; color:#FFFFFF; padding-left: 20px;padding-right: 20px; margin-left: 100px" class="btn btn-default">Confirm Request </a>
+
+    </div>
+    <div style="" class="col-lg-6">
+        <a href="~/Second/Delete/@Model.IME" style="background-color: #6B8E23; color:#FFFFFF; padding-left: 20px;padding-right: 20px" class="btn btn-default">Delete</a>
+    </div>
+      
+   
+</div>

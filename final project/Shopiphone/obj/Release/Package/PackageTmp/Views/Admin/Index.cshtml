@@ -1,0 +1,122 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Index", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                if (ViewBag.Message != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            alert("@ViewBag.Message");
+                        };
+                    </script>
+                }
+                <div class="row">
+                    <div class="col-md-8">
+                        <section id="loginForm">
+
+
+
+                            <div class="container">
+
+                                <!-- GROUP MEMEBER CONTENT HERE -->
+                                <style>
+                                    .vl {
+                                        border-left: 6px solid green;
+                                        margin-bottom: -40px;
+                                        height: 35px;
+                                    }
+                                </style>
+
+                                <div class="vl"></div>
+
+                                <p style="margin-top: 0px;font-size: 30px" class="navbar-text"><b>What I Can All Do</b></p>
+                                <img style="max-width:1000px;margin-top: 10px;margin-left: -10px; margin-bottom: 100px" alt="Brand" src="~/Pictures/textimage1.png">
+                            </div>
+
+                            <style>
+                                .v2 {
+                                    border-left: 6px;
+                                    margin-bottom: -20px;
+                                    height: 100px;
+                                }
+                            </style>
+                            <div class="v2"></div>
+
+                            <style>
+                                .sidebar {
+                                    width: 225px;
+                                    height: 600px;
+                                    background-color: #228B22;
+                                    margin-top: -60px;
+                                }
+                            </style>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="sidebar">
+                                            <div>
+                                                <form>
+                                                    <button style="margin-top: 10px; margin-bottom: 5px; font-size: 16px;background: #6B8E23;" class="btn btn-primary btn-lg" type="submit" formaction="~/Mobile/Create">
+                                                        Add New Mobile Phones
+
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            <div>
+                                                <form>
+                                                    <button style="margin-top: 10px; margin-bottom: 20px; font-size: 16px;background: #6B8E23;" class="btn btn-primary btn-lg" type="submit" formaction="~/Second/Index">
+                                                        Confirm or Cancel Mobile
+
+                                                    </button>
+                                                </form>
+                                            </div>
+
+                                            <div>
+                                                <form>
+                                                    <button style=" font-size: 16px;width: 218px;background: #6B8E23" class="btn btn-primary btn-lg" type="submit" formaction="~/ShoppingCart/Soldlist">Sale List</button>
+                                                </form>
+                                            </div>
+
+                                            <div>
+                                                <form>
+                                                    <button style=" font-size: 16px;width: 218px;background: #6B8E23" class="btn btn-primary btn-lg" type="submit" formaction="~/Purchase/Index"> Purchase List</button>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div style="" class="col-lg-6">
+                                        <button class="btn btn-primary btn-lg" type="submit" formaction="~/Mobile/Index" style="background-color: #6B8E23; margin-left: -300px;margin-right: 30px;">Items Remaining </button>
+
+
+
+                                    </div>
+                                    <div style="" class="col-lg-6">
+
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </section>
+                    </div>
+                </div>
+            }
+        </section>
+        </div>
+    </div>
+
+

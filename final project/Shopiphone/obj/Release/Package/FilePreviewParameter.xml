@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/shopiphone" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Engr\\Desktop\\final\\Shopiphone\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Engr\\Desktop\\final\\Shopiphone\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ShopiphoneEntities-Web.config Connection String" description="" value="metadata=res://*/ShopiphoneDb.csdl|res://*/ShopiphoneDb.ssdl|res://*/ShopiphoneDb.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DEVIL\SQLEXPRESS;initial catalog=Shopiphone;user id=sa;password=Alone23;MultipleActiveResultSets=True&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Engr\\Desktop\\final\\Shopiphone\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShopiphoneEntities']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=DEVIL\SQLEXPRESS;Initial Catalog=Shopiphone;User ID=sa;Password=Alone23" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Engr\\Desktop\\final\\Shopiphone\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ShopiphoneEntities1-Web.config Connection String" description="" value="metadata=res://*/ShopiphoneDb.csdl|res://*/ShopiphoneDb.ssdl|res://*/ShopiphoneDb.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DEVIL\SQLEXPRESS;initial catalog=Shopiphone;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Engr\\Desktop\\final\\Shopiphone\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShopiphoneEntities1']/@connectionString" />
+  </parameter>
+</parameters>
